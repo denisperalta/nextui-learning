@@ -4,12 +4,18 @@ import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
+import { Image } from "@nextui-org/image";
+
+import background from "@/assets/backgroundcampo.jpeg";
 
 export default function Home() {
   return (
     <>
-      <p>This is the main page</p>;{/* // EU SOU DENIS */}
-      <span style={{ display: "none" }}>Feito por Denis</span>
+      <div className="bg-background-campo h-full w-full bg-cover bg-center bg-no-repeat">
+        <div className="center h-full w-full text-center backdrop-brightness-75">
+          <h1>Aqui vamos colocar a informação do site</h1>
+        </div>
+      </div>
     </>
   );
 }

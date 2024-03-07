@@ -16,12 +16,6 @@ const rows = [
     hora: "12:00",
     times: ["PAL", "CUI"],
   },
-  {
-    key: "2",
-    estadio: "Tony Reichert",
-    hora: "12:00",
-    times: ["PAL", "CUI"],
-  },
 ];
 
 const columns = [

@@ -14,37 +14,44 @@ export default function Login() {
   const toggleVisibility = () => setIsVisible(!isVisible);
 
   return (
-    <main className="flex items-center justify-center flex-col h-96">
-      <form
-        // onSubmit={submitHandler}
-        className="flex w-1/2 flex-col flex-wrap md:flex-nowrap gap-4"
-      >
-        <Input type="email" label="Email" name="email" isRequired />
-        <Input
-          label="Senha"
-          id="password"
-          name="password"
-          isRequired
-          endContent={
-            <button
-              className="focus:outline-none"
-              type="button"
-              onClick={toggleVisibility}
-            >
-              {isVisible ? (
-                <EyeSlashFilledIcon className="text-2xl text-default-400 pointer-events-none" />
-              ) : (
-                <EyeFilledIcon className="text-2xl text-default-400 pointer-events-none" />
-              )}
-            </button>
-          }
-          type={isVisible ? "text" : "password"}
-          // className="max-w-xs"
-        />
-        <Button>Entrar</Button>
-      </form>
-      <Link href="#">Esqueceu a sua Senha?</Link>
-      <Link href="#">Criar nova conta</Link>
+    <main className="bg-background-campo flex h-full w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat brightness-[0.8]">
+      <div className="flex w-fit flex-col justify-center rounded border border-black bg-gray-700/60 p-4">
+        <form
+          // onSubmit={submitHandler}
+          className="flex flex-col flex-wrap gap-4 md:flex-nowrap"
+        >
+          <Input type="email" label="Email" name="email" isRequired />
+          <Input
+            label="Senha"
+            id="password"
+            name="password"
+            isRequired
+            endContent={
+              <button
+                className="focus:outline-none"
+                type="button"
+                onClick={toggleVisibility}
+              >
+                {isVisible ? (
+                  <EyeSlashFilledIcon className="pointer-events-none text-2xl text-default-400" />
+                ) : (
+                  <EyeFilledIcon className="pointer-events-none text-2xl text-default-400" />
+                )}
+              </button>
+            }
+            type={isVisible ? "text" : "password"}
+            // className="max-w-xs"
+          />
+          <Button>Entrar</Button>
+        </form>
+
+        <Link href="#" className="mt-2 font-bold text-green-500">
+          Esqueceu a sua Senha?
+        </Link>
+        <Link href="#" className="mt-2 font-bold text-green-500">
+          Criar nova conta
+        </Link>
+      </div>
     </main>
   );
 }

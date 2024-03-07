@@ -20,11 +20,10 @@ export default function Navigation() {
       <NavbarBrand>
         {/*<AcmeLogo /> */}
         <Link href={"/"}>
-          <p className="font-bold text-inherit">Lorem </p>
-          <p className="font-bold text-inherit"> Ipsum</p>
+          <p className="font-bold text-inherit">DIRIGENTE FC</p>
         </Link>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden gap-4 sm:flex" justify="center">
         <NavLink href="/termos">Termos de Uso</NavLink>
         <NavLink href="/regulamento">Regulamento</NavLink>
         <NavLink href="/faq">FAQ</NavLink>

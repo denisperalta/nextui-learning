@@ -12,69 +12,71 @@ export default function Cadastro() {
 
   const toggleVisibility = () => setIsVisible(!isVisible);
   return (
-    <main className="flex items-center justify-center flex-col">
-      <form
-        action=""
-        className="flex w-1/2 flex-col flex-wrap md:flex-nowrap gap-4"
-      >
-        <Input type="text" id="name" name="name" label="Nome" size="sm" />
-        <Input
-          type="text"
-          id="surname"
-          name="surname"
-          placeholder="Sobrenome"
-          size="sm"
-        />
-        <Input type="email" label="Email" isRequired size="sm" />
-        <Input
-          label="Senha"
-          isRequired
-          size="sm"
-          endContent={
-            <button
-              className="focus:outline-none"
-              type="button"
-              onClick={toggleVisibility}
-            >
-              {isVisible ? (
-                <EyeSlashFilledIcon className="text-2xl text-default-400 pointer-events-none" />
-              ) : (
-                <EyeFilledIcon className="text-2xl text-default-400 pointer-events-none" />
-              )}
-            </button>
-          }
-          type={isVisible ? "text" : "password"}
-          className="max-w-xs"
-        />
-        {/* // ADD CALENDAR */}
-        {/* // ADD GENDER */}
-        <Input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Nome de usuário"
-          size="sm"
-        />
-        {/* // ADD COUNTRY */}
-        {/* // ADD TEAM */}
-        {/* // ADD PHONE */}
-        {/* // ADD CPF */}
-        <p>
-          Ao clicar em Cadastre-se, você concorda com nossos{" "}
-          <Link href="#" underline="always">
-            Termos de Uso
-          </Link>
-          ,{" "}
-          <Link href="#" underline="always">
-            Política de Privacidade
-          </Link>{" "}
-          e{" "}
-          <Link href="#" underline="always">
-            Política de Segurança.
-          </Link>
-        </p>
-        <Button>Cadastre-se</Button>
-      </form>
+    <main className="bg-background-campo flex h-full w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat brightness-[0.8]">
+      <div className="flex w-fit justify-center rounded border border-black bg-gray-700/60 p-4">
+        <form
+          action=""
+          className="flex flex-col flex-wrap gap-4 md:flex-nowrap"
+        >
+          <Input type="text" id="name" name="name" label="Nome" size="sm" />
+          <Input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Sobrenome"
+            size="sm"
+          />
+          <Input type="email" label="Email" isRequired size="sm" />
+          <Input
+            label="Senha"
+            isRequired
+            size="sm"
+            endContent={
+              <button
+                className="focus:outline-none"
+                type="button"
+                onClick={toggleVisibility}
+              >
+                {isVisible ? (
+                  <EyeSlashFilledIcon className="pointer-events-none text-2xl text-default-400" />
+                ) : (
+                  <EyeFilledIcon className="pointer-events-none text-2xl text-default-400" />
+                )}
+              </button>
+            }
+            type={isVisible ? "text" : "password"}
+            className="max-w-xs"
+          />
+          {/* // ADD CALENDAR */}
+          {/* // ADD GENDER */}
+          <Input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Nome de usuário"
+            size="sm"
+          />
+          {/* // ADD COUNTRY */}
+          {/* // ADD TEAM */}
+          {/* // ADD PHONE */}
+          {/* // ADD CPF */}
+          <p className="w-96 font-bold text-green-500">
+            Ao clicar em Cadastre-se, você concorda com nossos{" "}
+            <Link href="#" underline="always" className="text-green-500">
+              Termos de Uso
+            </Link>
+            ,{" "}
+            <Link href="#" underline="always" className="text-green-500">
+              Política de Privacidade
+            </Link>{" "}
+            e{" "}
+            <Link href="#" underline="always" className="text-green-500">
+              Política de Segurança.
+            </Link>
+          </p>
+          <Button>Cadastre-se</Button>
+        </form>
+      </div>
     </main>
   );
 }
